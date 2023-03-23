@@ -4,12 +4,13 @@
 
 export const environment = {
   firebase: {
-    projectId: 'authapp-d0ba7',
-    appId: '1:539761576256:web:fac746fb1feed25cb112a5',
-    storageBucket: 'authapp-d0ba7.appspot.com',
-    apiKey: 'AIzaSyB5yswUXcA9lrckKNWpow7OB05p7xNwBXs',
-    authDomain: 'authapp-d0ba7.firebaseapp.com',
-    messagingSenderId: '539761576256',
+    apiKey: "AIzaSyB5yswUXcA9lrckKNWpow7OB05p7xNwBXs",
+    authDomain: "authapp-d0ba7.firebaseapp.com",
+    databaseURL: "https://authapp-d0ba7-default-rtdb.firebaseio.com",
+    projectId: "authapp-d0ba7",
+    storageBucket: "authapp-d0ba7.appspot.com",
+    messagingSenderId: "539761576256",
+    appId: "1:539761576256:web:fac746fb1feed25cb112a5"
   },
 
 };
