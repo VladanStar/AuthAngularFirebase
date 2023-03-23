@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
 login(){
 this.authService.login(this.username, this.password).then(()=>{
 console.log("success")
-alert('login is successfully');
-this.router.navigate(["/welcome"])
+alert('login is successfully')
 }).catch(err=>{
 console.log("not")
 alert(err);

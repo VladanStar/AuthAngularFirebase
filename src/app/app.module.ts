@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { environment } from '../environments/environment';
-import {AngularFireModule} from "@angular/fire/compat";
+import { AngularFireModule } from '@angular/fire/compat';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -26,19 +26,19 @@ import { FormsModule } from '@angular/forms';
     SignupComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-FormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),
     // provideDatabase(() => getDatabase()),
     // provideFirestore(() => getFirestore())
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
