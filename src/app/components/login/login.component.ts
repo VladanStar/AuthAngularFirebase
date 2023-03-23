@@ -26,4 +26,7 @@ console.log("not")
 alert(err);
 })
 }
+rememberMe(){
+this.authService.setRememberMe()
+}
 }

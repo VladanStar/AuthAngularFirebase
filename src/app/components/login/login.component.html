@@ -25,15 +25,17 @@
               [(ngModel)]="password"
             />
           </div>
-          <!-- <div class="form-check">
+          <div class="form-check">
             <input
+(click)="rememberMe()"
+              type="checkbox"
               class="form-check-input"
               placeholder=""
               value=""
               id="remember"
             />
             <label for="remember" class="form-check-label">Remember Me</label>
-          </div> -->
+          </div>
           <div class="mb-3 mt-3 d-grid gap-2">
             <button type="submit" title="#" class="btn btn-warning">
               Login
