@@ -29,7 +29,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
     FooterComponent,
-        RegisterComponent,
+RegisterComponent,
         DashboardComponent,
   ],
   imports: [

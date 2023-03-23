@@ -8,25 +8,32 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  username: string="";
-  password: string="";
+  username: string = '';
+  password: string = '';
+  email: any;
 
-  constructor( private authService:AuthService,
-    private router:Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
+  login() {
+    if (this.email == '') {
+      alert('Please enter email');
+      return;
+    }
 
-login(){
-this.authService.login(this.username, this.password).then(()=>{
-console.log("success")
-alert('login is successfully')
-}).catch(err=>{
-console.log("not")
-alert(err);
-})
-}
-rememberMe(){
-this.authService.setRememberMe()
-}
+    if (this.password == '') {
+      alert('Please enter password');
+      return;
+    }
+
+    this.authService.login(this.email, this.password);
+
+    this.email = '';
+    this.password = '';
+  }
+
+  signInWithGoogle() {
+    this.authService.googleSignIn();
+  }
 }

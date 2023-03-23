@@ -1,48 +1,66 @@
-<div class="container">
-  <div class="row">
-    <div class="card">
-      <h3 class="card-header">Login Form</h3>
-      <div class="card-body">
-        <form (onSubmit)="login()">
-          <div class="mb-3">
-            <label for="username" class="form-label">UserName</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              class="form-control"
-              [(ngModel)]="username"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              autocomplete="current-password"
-              class="form-control"
-              [(ngModel)]="password"
-            />
-          </div>
-          <div class="form-check">
-            <input
-(click)="rememberMe()"
-              type="checkbox"
-              class="form-check-input"
-              placeholder=""
-              value=""
-              id="remember"
-            />
-            <label for="remember" class="form-check-label">Remember Me</label>
-          </div>
-          <div class="mb-3 mt-3 d-grid gap-2">
-            <button type="submit" title="#" class="btn btn-warning">
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <form (ngSubmit)="signInWithGoogle()">
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Login</h4>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                [(ngModel)]="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                [(ngModel)]="password"
+              />
+            </div>
+            <button type="button" class="btn btn-info" (click)="login()">
               Login
             </button>
-          </div>
-        </form>
+            <div class="row">
+              <div class="col-md-6">
+                <a routerLink="/register" style="text-decoration: none"
+                  >Need Account ? <span class="text-danger">Register</span></a
+                >
+              </div>
+              <div class="col-md-6">
+                <a
+                  routerLink="/forgot-password"
+                  class="text-dark"
+                  style="text-decoration: none"
+                >
+                  Forgot Password ?
+                </a>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <a style="text-decoration: none; cursor: pointer">
+                <div class="card shadow text-center">
+                  <div class="card-body">
+                    <img src="#" alt="" height="24px" width="24px" /> Sign In
+                    with Google
+                  </div>
+                </div>
+              </a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+    <div class="col"></div>
   </div>
 </div>
