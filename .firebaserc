@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "authapp-d0ba7": {
+      "hosting": {
+        "project03": [
+          "authapp-d0ba7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "authapp-d0ba7"
+  }
+}
