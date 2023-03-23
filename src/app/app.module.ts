@@ -5,13 +5,10 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 //import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 // import { environment } from '../environments/environment';
 // import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -21,11 +18,10 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
+
     LoginComponent,
-    SignupComponent,
-    PageNotFoundComponent,
-    NavbarComponent,
+
+
     FooterComponent,
   ],
   imports: [
