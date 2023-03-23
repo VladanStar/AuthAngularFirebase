@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -7,16 +8,22 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  username: any;
-  password: any;
+  username: string="";
+  password: string="";
 
-  constructor( private authService:AuthService) {}
+  constructor( private authService:AuthService,
+    private router:Router) {}
 
   ngOnInit(): void {}
+
+
 login(){
 this.authService.login(this.username, this.password).then(()=>{
-alert('login is successfully')
+console.log("success")
+alert('login is successfully');
+this.router.navigate(["/welcome"])
 }).catch(err=>{
+console.log("not")
 alert(err);
 })
 }
